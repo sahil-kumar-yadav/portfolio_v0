@@ -1,27 +1,32 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-.sidebar {
-  position: absolute;
-  background-color: #2a1042;
-  width: 18vw;
-  height: 100vh;
-  transition: transform 0.3s ease-in;
-
+/* Common CSS */
+.container {
+  display: flex;
 }
 
-.sidebar nav {
+.sidebar {
+  background-color: #1e1c1f;
+  color: whitesmoke;
+  width: 18vw;
+  height: 100vh;
   padding: 45px;
 }
 
-.sidebar nav li {
-  list-style: none;
+.sidebar nav ul {
+  padding: 0;
+}
+
+.sidebar nav ul li {
   font-size: 30px;
   padding: 33px 0;
 }
-.sidebar nav li a {
+
+.sidebar nav ul li a {
   text-decoration: none;
   color: whitesmoke;
 }
@@ -33,9 +38,29 @@
   padding: 23px;
 }
 
-.container {
-  display: flex;
+.hamburger {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 29px;
+  display: inline;
+  /* background: #4906f2; */
+  color: white;
 }
+.ham{
+  margin-top: 0.5px;
+}
+.cross {
+  margin-left: 20vh;
+  margin-top: 8px;
+}
+
+.sidebargo {
+  transform: translate(-443px, 0px);
+  position: absolute;
+}
+
+/* Info Container */
 .infocontainer {
   background-color: whitesmoke;
   height: 58vh;
@@ -44,49 +69,52 @@
   display: flex;
   justify-content: space-around;
 }
+
 .devinfo {
   font-size: 16px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.hello {
-  font-size: 3em;
-}
+
+.hello,
 .name {
   font-size: 3em;
   font-weight: bold;
 }
+
 .about {
   font-size: 2em;
 }
+
 .moreabout {
   font-size: 2.2em;
   margin-top: 23px;
 }
-.buttons{
+
+.btn {
   margin: 2.2em;
   font-size: 16px;
 }
-.btn {
-  margin-top: 34px;
-  font-weight: 300;
-}
-.btn button {
-  padding: 9px 14px;
-  border-radius: 22px;
-  color: white;
+
+/* Styling for the buttons */
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
   background-color: dodgerblue;
-  font-weight: bold;
-  font-size: 21px;
-  margin: 0 3px;
-  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 10px; /* Adjust margin as needed */
+  transition: background-color 0.3s ease;
 }
-.btn-sm button {
-  font-size: 12px;
-  padding: 10px 19px;
-  margin: 12px 0;
+
+.btn-link:hover {
+  background-color: #0069d9; /* Darken the background color on hover */
 }
+
+
 .btn button:hover {
   color: dodgerblue;
   background-color: white;
@@ -94,38 +122,46 @@
 
 .devpic img {
   height: 58vh;
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-/* contact form  */
+/* Contact Form */
 .contactform {
   padding: 0 34px;
   padding-top: 120px;
   margin: 0 90px;
 }
+
 .contactform h1 {
   text-align: center;
   padding: 12px 0;
 }
-.contactform form  {
+
+.contactform form {
   margin: 0 40px;
 }
+
 .contactform form div {
   padding: 10px 0;
   display: flex;
   flex-direction: column;
 }
+
 .contactform form div input {
   width: 26vw;
   border-radius: 5px;
   margin: 6px 0 0 0;
   padding: 3px;
 }
+
 #emailHelp {
   font-size: 11px;
   color: midnightblue;
   margin: 0 5px;
   padding: 3px 0 0 0;
 }
+
 #form-check {
   flex-direction: row;
 }
@@ -135,105 +171,84 @@
   margin: 3px 0;
 }
 
-/* blog css */
+/* Blog */
+.blogcontainer {
+  margin: 0 90px;
+}
+
+.blogcontainer h1 {
+  margin: 23px;
+}
 
 .blogItem {
   margin: 20px;
 }
-.blogcontainer{
+
+/* Intro Page */
+.intro {
   margin: 0 90px;
 }
-.blogcontainer h1 {
-  margin: 23px;
-}
-/* .blogitem h2{
-    
-}
-.blogitem p{
 
-} */
-
-/* into page styles */
-.intro{
-  margin: 0 90px;
-}
-.intro h1 {
-  margin: 12px;
-}
-.intro h2 {
-  margin: 12px;
-}
-
+.intro h1,
+.intro h2,
 .intro p {
   margin: 12px;
 }
+
 .skilcontainer {
   padding: 12px;
 }
+
 .skillitem {
   display: flex;
   align-items: center;
   margin: 20px 0;
   font-weight: 900;
 }
+
 .skill {
   width: 23px;
   height: 23px;
   background-color: red;
   border: 3px solid black;
 }
+
 .hundered {
   width: 265px;
   background-color: crimson;
 }
+
 .fifty {
   width: 125px;
   background-color: brown;
 }
+
 .t5 {
   width: 75px;
   background-color: rgb(15, 38, 173);
 }
-.hamburger {
-  position: absolute;
-  cursor: pointer;
-  top: 10px;
-  left: 29px;
-}
-.ham{
-  margin-top: 0.5px;
-}
-.cross {
-  margin-left: 150px;
-  margin-top: 8px;
-}
 
-.sidebargo {
-  transform: translate(-443px, 0px);
-  position: absolute;
-}
-
-/* making responsiveness */
-
+/* Responsive */
 @media (max-width: 800px) {
-  /* * {
-    background-color: rgb(212, 153, 153);
+  .hamburger {
+    display: block;
   }
-  .sidebar {
-    transform: translate(-443px, 0px);
-    position: absolute;
-  } */
-  .buttons{
+
+  .buttons {
     font-size: 6px;
   }
-  .devinfo{
+
+  .devinfo {
     font-size: 10px;
   }
-  .devpic{
+
+  .devpic {
     display: none;
   }
-  .intro,.blogcontainer,.contactform{
-    margin: 50px 8px;
 
+  .intro,
+  .blogcontainer,
+  .contactform {
+    margin: 50px 8px;
   }
 }

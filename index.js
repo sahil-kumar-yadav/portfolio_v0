@@ -1,1 +1,0 @@
-// timing where video paused is 1:21:14

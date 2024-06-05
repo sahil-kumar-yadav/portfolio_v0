@@ -1,0 +1,54 @@
+
+
+.contactform {
+    
+    max-width: 600px;
+}
+
+.contactform h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-text {
+    font-size: 14px;
+    color: #666;
+}
+
+#form-check {
+    margin-top: 10px;
+}
+
+.form-check-label {
+    color: #333;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.btn button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn button:hover {
+    background-color: #555;
+}

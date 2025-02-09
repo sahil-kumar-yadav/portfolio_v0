@@ -1,254 +1,297 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
+/* Global Reset and Box-Sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Common CSS */
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif; /* Choose a clean, modern font */
+    line-height: 1.6;
+    background-color: #ecf0f1; /* Light background color for the page */
+    color: #333; /* Dark text color for better readability */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-size: 16px; /* Default font size */
+}
+
+/* HTML and Body Sizing */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Smooth Scroll for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic Link Styles */
+a {
+    text-decoration: none;
+    color: inherit; /* Links will inherit color from parent */
+}
+
+/* Paragraph and Text Styling */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555; /* Slightly lighter color for paragraphs */
+}
+
+/* Section Styling */
+section {
+    width: 100%;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+/* Container for content alignment */
 .container {
-  display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.sidebar {
-  background-color: #1e1c1f;
-  color: whitesmoke;
-  width: 18vw;
-  height: 100vh;
-  padding: 45px;
+/* Ensure full-width sections */
+section {
+    padding: 100px 10%;
+    margin: 0 auto;
 }
 
-.sidebar nav ul {
-  padding: 0;
+/* Apply a simple global box shadow effect to most sections for separation */
+section:not(.contact-section) {
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.sidebar nav ul li {
-  font-size: 30px;
-  padding: 33px 0;
+/* Responsive text sizes */
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
 }
 
-.sidebar nav ul li a {
-  text-decoration: none;
-  color: whitesmoke;
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-.main {
-  background-color: whitesmoke;
-  height: 100vh;
-  width: 100vw;
-  padding: 23px;
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.hamburger {
-  position: absolute;
-  cursor: pointer;
-  top: 10px;
-  left: 29px;
-  display: inline;
-  /* background: #4906f2; */
-  color: white;
-}
-.ham{
-  margin-top: 0.5px;
-}
-.cross {
-  margin-left: 20vh;
-  margin-top: 8px;
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
-.sidebargo {
-  transform: translate(-443px, 0px);
-  position: absolute;
+/* Section Padding Adjustments */
+section#about,
+section#projects {
+    padding: 80px 5%;
 }
 
-/* Info Container */
-.infocontainer {
-  background-color: whitesmoke;
-  height: 58vh;
-  width: 80vw;
-  margin: 144px auto;
-  display: flex;
-  justify-content: space-around;
+/* Contact Section Special Padding */
+section#contact {
+    padding: 80px 10%;
+    background: #2c3e50;
 }
 
-.devinfo {
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+/* Ensure no text overflows outside its section */
+body {
+    overflow-x: hidden;
 }
 
-.hello,
-.name {
-  font-size: 3em;
-  font-weight: bold;
+/* Hero Section Adjustment for Smooth Scrolling */
+#home {
+    padding-top: 100px; /* Padding at the top for the navbar space */
 }
 
-.about {
-  font-size: 2em;
-}
-
-.moreabout {
-  font-size: 2.2em;
-  margin-top: 23px;
-}
-
-.btn {
-  margin: 2.2em;
-  font-size: 16px;
-}
-
-/* Styling for the buttons */
-.btn-link {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: dodgerblue;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  margin-right: 10px; /* Adjust margin as needed */
-  transition: background-color 0.3s ease;
-}
-
-.btn-link:hover {
-  background-color: #0069d9; /* Darken the background color on hover */
+/* Animation Defaults */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-.btn button:hover {
-  color: dodgerblue;
-  background-color: white;
+/* For Tablets (screen widths from 768px to 1024px) */
+@media (max-width: 1024px) {
+    /* Adjust padding for sections */
+    section {
+        padding: 80px 5%;
+    }
+
+    /* Adjust font sizes for headers */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Make the navbar links display as block (vertical stack) on small screens */
+    .navbar-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Increase space between navigation items */
+    .navbar-links ul li {
+        padding: 10px 0;
+    }
+
+    /* Adjust form input fields and buttons for mobile */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px;
+    }
+
+    /* Make social media icons larger on tablets */
+    .social-icon img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-.devpic img {
-  height: 58vh;
-  max-width: 100%;
-  border-radius: 10px;
+/* For Mobile (screen widths up to 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce body font size for smaller screens */
+    }
+
+    /* Make navigation links stack vertically */
+    .navbar-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: block;
+    }
+
+    /* Mobile Hamburger Menu */
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger-menu .bar {
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+    }
+
+    /* Adjust padding for sections on mobile */
+    section {
+        padding: 60px 5%;
+    }
+
+    /* Adjust font sizes for headers */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Make the contact form inputs and buttons fit better */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    /* Adjust social media icons size */
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Make the navbar links stack vertically */
+    .navbar-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Reduce the gap between navbar items */
+    .navbar-links ul li {
+        padding: 10px 0;
+    }
+
+    /* Adjust the contact form width for mobile */
+    .contact-form {
+        width: 100%;
+    }
 }
 
-/* Contact Form */
-.contactform {
-  padding: 0 34px;
-  padding-top: 120px;
-  margin: 0 90px;
+/* For Extra Small Devices (e.g., very small mobile screens) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Even smaller font size */
+    }
+
+    /* Reduce padding for smaller devices */
+    section {
+        padding: 50px 3%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Adjust social media icons size */
+    .social-icon img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Adjust navbar items to stack neatly */
+    .navbar-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
-.contactform h1 {
-  text-align: center;
-  padding: 12px 0;
-}
 
-.contactform form {
-  margin: 0 40px;
-}
 
-.contactform form div {
-  padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.contactform form div input {
-  width: 26vw;
-  border-radius: 5px;
-  margin: 6px 0 0 0;
-  padding: 3px;
-}
-
-#emailHelp {
-  font-size: 11px;
-  color: midnightblue;
-  margin: 0 5px;
-  padding: 3px 0 0 0;
-}
-
-#form-check {
-  flex-direction: row;
-}
-
-#form-check input {
-  width: 24px;
-  margin: 3px 0;
-}
-
-/* Blog */
-.blogcontainer {
-  margin: 0 90px;
-}
-
-.blogcontainer h1 {
-  margin: 23px;
-}
-
-.blogItem {
-  margin: 20px;
-}
-
-/* Intro Page */
-.intro {
-  margin: 0 90px;
-}
-
-.intro h1,
-.intro h2,
-.intro p {
-  margin: 12px;
-}
-
-.skilcontainer {
-  padding: 12px;
-}
-
-.skillitem {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  font-weight: 900;
-}
-
-.skill {
-  width: 23px;
-  height: 23px;
-  background-color: red;
-  border: 3px solid black;
-}
-
-.hundered {
-  width: 265px;
-  background-color: crimson;
-}
-
-.fifty {
-  width: 125px;
-  background-color: brown;
-}
-
-.t5 {
-  width: 75px;
-  background-color: rgb(15, 38, 173);
-}
-
-/* Responsive */
-@media (max-width: 800px) {
-  .hamburger {
-    display: block;
-  }
-
-  .buttons {
-    font-size: 6px;
-  }
-
-  .devinfo {
-    font-size: 10px;
-  }
-
-  .devpic {
-    display: none;
-  }
-
-  .intro,
-  .blogcontainer,
-  .contactform {
-    margin: 50px 8px;
-  }
-}

@@ -1,0 +1,283 @@
+
+/* Projects Section */
+.projects-section {
+    background: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .project-card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f4f6f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .project-card:hover .project-info {
+    transform: translateY(0);
+  }
+  
+  .project-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    font-size: 1.2rem;
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #e67e22;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Projects Section */
+  .projects-section {
+    background: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+    gap: 30px;
+    justify-items: center;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .project-card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f4f6f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .project-card:hover .project-info {
+    transform: translateY(0);
+  }
+  
+  .project-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    font-size: 1.2rem;
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #e67e22;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* ----- Responsive Design for Smaller Screens ----- */
+  
+  /* For Tablets (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .projects-section h2 {
+      font-size: 2.5rem; /* Reduce font size */
+      margin-bottom: 30px; /* Adjust margin */
+    }
+  
+    .projects-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+      gap: 20px;
+    }
+  
+    .project-card {
+      max-width: 320px; /* Reduce card size for tablets */
+    }
+  }
+  
+  /* For Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .projects-section {
+      padding: 60px 20px; /* Reduce padding on mobile */
+    }
+  
+    .projects-section h2 {
+      font-size: 2rem; /* Reduce font size */
+      margin-bottom: 20px; /* Adjust margin */
+    }
+  
+    .projects-container {
+      grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+      gap: 15px;
+    }
+  
+    .project-card {
+      max-width: 100%; /* Ensure project card takes full width */
+    }
+  
+    .project-card h3 {
+      font-size: 1.6rem; /* Reduce project card title size */
+    }
+  
+    .project-card p {
+      font-size: 1rem; /* Reduce project card text size */
+    }
+  
+    .project-link {
+      font-size: 1.1rem; /* Reduce link size */
+    }
+  }
+  
+  /* For Extra Small Devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .projects-section h2 {
+      font-size: 1.6rem; /* Further reduce font size */
+      margin-bottom: 15px; /* Less margin for very small screens */
+    }
+  
+    .projects-container {
+      grid-template-columns: repeat(1, 1fr); /* Still 1 column */
+      gap: 10px; /* Reduce gap */
+    }
+  
+    .project-card {
+      max-width: 100%; /* Full width for cards */
+    }
+  
+    .project-card h3 {
+      font-size: 1.4rem; /* Smaller project card title */
+    }
+  
+    .project-card p {
+      font-size: 0.9rem; /* Smaller project card text */
+    }
+  
+    .project-link {
+      font-size: 1rem; /* Smaller link size */
+    }
+  }

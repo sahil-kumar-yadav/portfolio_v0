@@ -1,0 +1,140 @@
+
+/* Home Section */
+.home-section {
+    background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .home-section .home-content {
+    z-index: 10;
+    padding: 20px;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  .home-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .home-section .highlight {
+    color: #f39c12;
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  
+  .home-section .tagline {
+    font-size: 1.6rem;
+    margin: 10px 0;
+    letter-spacing: 1px;
+  }
+  
+  .home-section .cta-button {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .home-section .cta-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  
+  /* For Tablets (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .home-section {
+      height: 80vh; /* Reduce height on tablets */
+    }
+  
+    .home-section h1 {
+      font-size: 2.5rem; /* Smaller font size */
+    }
+  
+    .home-section .highlight {
+      font-size: 3rem; /* Smaller font size for highlight */
+    }
+  
+    .home-section .tagline {
+      font-size: 1.4rem; /* Adjust tagline size */
+    }
+  
+    .home-section .cta-button {
+      padding: 12px 25px; /* Reduce padding for smaller screens */
+      font-size: 16px; /* Smaller button text */
+    }
+  }
+  
+  /* For Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .home-section {
+      height: 100vh; /* Full height on mobile */
+      padding: 20px;
+    }
+  
+    .home-section h1 {
+      font-size: 2rem; /* Smaller font size for mobile */
+    }
+  
+    .home-section .highlight {
+      font-size: 2.5rem; /* Adjust highlight size */
+    }
+  
+    .home-section .tagline {
+      font-size: 1.2rem; /* Adjust tagline size */
+    }
+  
+    .home-section .cta-button {
+      padding: 10px 20px; /* Smaller button */
+      font-size: 14px; /* Adjust font size of button */
+    }
+  }
+  
+  /* For Extra Small Devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .home-section h1 {
+      font-size: 1.6rem; /* Further reduce font size for very small screens */
+    }
+  
+    .home-section .highlight {
+      font-size: 2rem; /* Adjust highlight font size */
+    }
+  
+    .home-section .tagline {
+      font-size: 1rem; /* Smaller tagline */
+    }
+  
+    .home-section .cta-button {
+      padding: 8px 18px; /* Even smaller button */
+      font-size: 12px; /* Small font size for button */
+    }
+  }
+  
